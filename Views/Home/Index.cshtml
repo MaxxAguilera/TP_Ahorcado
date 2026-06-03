@@ -6,10 +6,10 @@
     <h1 class="display-4">Ahorcado</h1>
     <p>Completa el juego. Tienes 10 intentos</p>
 </div>
-
-@foreach (char l in ViewBag.palabra){
-    <label>_</label>
-}
 <br>
+<p id="palabraEscrita">@ViewBag.palabraGuiones</p>
+<input type="hidden" id="palabraGuiones" value="@ViewBag.palabraGuiones">
+<input type="hidden" id="palabra" value="@ViewBag.palabra">
 <label for="inputLetra">Ingresar letra: </label>
 <input type="text" id="inputLetra">
+<button id="botonComprobar" onclick="ComprobarLetra()">Comprobar letra</button>

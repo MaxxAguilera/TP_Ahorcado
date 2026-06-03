@@ -16,7 +16,13 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         PalabrasAhorcado palabras = new PalabrasAhorcado();
-        ViewBag.palabra = palabras.ObtenerPalabra();
+        string palabraGuiones = null;
+        string palabra = palabras.ObtenerPalabra();
+        ViewBag.palabra = palabra;
+        for (int i = 0; i < palabra.Length; i++ ){
+            palabraGuiones += "-";
+        }
+        ViewBag.palabraGuiones = palabraGuiones;
         return View();
     }
 

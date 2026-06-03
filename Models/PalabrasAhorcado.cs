@@ -9,7 +9,7 @@ public class PalabrasAhorcado
         palabras.Add("Rinoceronte");
         palabras.Add("Sardinas");
         palabras.Add("Ebullición");
-        palabras.Add("Aglomerantoe");
+        palabras.Add("Aglomerante");
         palabras.Add("Parafraseo");
     }
 
