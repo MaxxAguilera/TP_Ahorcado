@@ -8,23 +8,23 @@
     "net9.0": []
   },
   "packageFolders": {
-    "C:\\Users\\49628407\\.nuget\\packages\\": {},
+    "C:\\Users\\49961152\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "Z:\\2026\\programacion\\tpAhorcado\\tpAhorcado.csproj",
+      "projectUniqueName": "C:\\Users\\49961152\\TP_Ahorcado\\tpAhorcado.csproj",
       "projectName": "tpAhorcado",
-      "projectPath": "Z:\\2026\\programacion\\tpAhorcado\\tpAhorcado.csproj",
-      "packagesPath": "C:\\Users\\49628407\\.nuget\\packages\\",
-      "outputPath": "Z:\\2026\\programacion\\tpAhorcado\\obj\\",
+      "projectPath": "C:\\Users\\49961152\\TP_Ahorcado\\tpAhorcado.csproj",
+      "packagesPath": "C:\\Users\\49961152\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\49961152\\TP_Ahorcado\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\49628407\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\49961152\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],

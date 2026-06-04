@@ -1,18 +1,23 @@
-﻿let palabraGuionesValor = document.getElementById("palabraGuiones").value;
+﻿let palabraGuionesMostrarpPantalla = document.getElementById("palabraGuiones").value;
 const palabra = document.getElementById("palabra").value;
 const contenedorPalabra = document.getElementById("palabraEscrita");
 
 function ComprobarLetra(){
     const letraUsuario = document.getElementById("inputLetra").value;
-    
-    for (let i = 0; i < palabra.Length; i++){
-        if(letraUsuario == palabra[i]){
-            palabraGuionesValor[i] = letraUsuario;
+    let palabraGuiones = null;
+    console.log(letraUsuario)
+    for (let i = 0; i < palabra.length; i++){
+        if (palabraGuionesMostrarpPantalla[i] == '-'){
+            if(letraUsuario == palabra[i]){
+                palabraGuiones += letraUsuario;
+            }
+            else{
+                palabraGuiones += '-'
+            }
         }
         else{
-            console.log("nop")
+            palabraGuiones += palabraGuionesMostrarpPantalla[i]
         }
     }
-    console.log(palabraGuionesValor);
-    contenedorPalabra.innerHTML = palabraGuionesValor;
+    contenedorPalabra.innerHTML = palabraGuionesMostrarpPantalla;
 }
