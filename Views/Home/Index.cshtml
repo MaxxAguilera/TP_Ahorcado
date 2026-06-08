@@ -3,13 +3,24 @@
 }
 
 <div class="text-center">
-    <h1 class="display-4">Ahorcado</h1>
-    <p>Completa el juego. Tienes 10 intentos</p>
+<h1>Juego del Ahorcado</h1>
+
+<p>
+    Bienvenido al clásico juego del Ahorcado. Tu objetivo es adivinar la palabra
+    oculta ingresando una letra por vez. Cada vez que aciertes, la letra se
+    revelará en la palabra; si te equivocas, perderás una oportunidad. ¡Intentá
+    descubrir la palabra antes de quedarte sin intentos!
+</p>
 </div>
 <br>
-<p id="palabraEscrita">@ViewBag.palabraGuiones</p>
-<input type="hidden" id="palabraGuiones" value="@ViewBag.palabraGuiones">
-<input type="hidden" id="palabra" value="@ViewBag.palabra">
+<div id="palabraEscrita">@ViewBag.palabraGuiones</div>
+<input type="hidden" id="palabraOculta" value="@ViewBag.palabraOculta">
+
 <label for="inputLetra">Ingresar letra: </label>
-<input type="text" id="inputLetra">
-<button id="botonComprobar" onclick="ComprobarLetra()">Comprobar letra</button>
+<input type="text" id="inputLetra"  maxlength="1">
+
+<button id="botonArriesgar" onclick="ArriesgarLetra()">Arriesgar letra</button>
+<div>
+    Vidas restantes: <span id="vidasRestantes">10</span>
+</div>
+<div id="mensajeFinal"></div>

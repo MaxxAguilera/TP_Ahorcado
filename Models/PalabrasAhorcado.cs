@@ -5,17 +5,24 @@ public class PalabrasAhorcado
     private List<string> palabras;
 
     public PalabrasAhorcado(){
-        palabras = new List<string>();
-        palabras.Add("Rinoceronte");
-        palabras.Add("Sardinas");
-        palabras.Add("Ebullición");
-        palabras.Add("Aglomerante");
-        palabras.Add("Parafraseo");
+        palabras = new List<string>()
+        {
+            "RINOCERONTE",
+            "SARDINAS",
+            "EBULLICIÓN",
+            "AGLOMERANTE",
+            "PARAFRASEO",
+            "COMPUTADORA",
+            "PROGRAMACIÓN",
+            "TELEFONÍA",
+            "ESTUDIANTE",
+            "VENTILADOR",
+        };
     }
 
     public string ObtenerPalabra(){
         Random rnd = new Random();
-        int palabra = rnd.Next(1, palabras.Count);
+        int palabra = rnd.Next(0, palabras.Count);
         return palabras[palabra];
     }
 }
