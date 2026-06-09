@@ -2,25 +2,24 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-<h1>Juego del Ahorcado</h1>
+<div class="juego">
+    <h1>Juego del Ahorcado</h1>
+    <p>
+        Bienvenido al clásico juego del Ahorcado. Tu objetivo es adivinar la palabra
+        oculta ingresando una letra por vez. Cada vez que aciertes, la letra se
+        revelará en la palabra; si te equivocas, perderás una oportunidad. ¡Intentá
+        descubrir la palabra antes de quedarte sin intentos!
+    </p>
+    <br>
+    <div id="palabraEscrita">@ViewBag.palabraGuiones</div>
+    <input type="hidden" id="palabraOculta" value="@ViewBag.palabraOculta">
 
-<p>
-    Bienvenido al clásico juego del Ahorcado. Tu objetivo es adivinar la palabra
-    oculta ingresando una letra por vez. Cada vez que aciertes, la letra se
-    revelará en la palabra; si te equivocas, perderás una oportunidad. ¡Intentá
-    descubrir la palabra antes de quedarte sin intentos!
-</p>
+    <label for="inputLetra">Ingresar letra: </label>
+    <input type="text" id="inputLetra"  maxlength="1">
+
+    <button id="botonArriesgar" onclick="ArriesgarLetra()">Arriesgar letra</button>
+    <div>
+        Vidas restantes: <span id="vidasRestantes">10</span>
+    </div>
+    <div id="mensajeFinal"></div>
 </div>
-<br>
-<div id="palabraEscrita">@ViewBag.palabraGuiones</div>
-<input type="hidden" id="palabraOculta" value="@ViewBag.palabraOculta">
-
-<label for="inputLetra">Ingresar letra: </label>
-<input type="text" id="inputLetra"  maxlength="1">
-
-<button id="botonArriesgar" onclick="ArriesgarLetra()">Arriesgar letra</button>
-<div>
-    Vidas restantes: <span id="vidasRestantes">10</span>
-</div>
-<div id="mensajeFinal"></div>

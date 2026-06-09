@@ -36,3 +36,14 @@ body {
 .form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
   text-align: start;
 }
+
+.juego{
+    text-align: center;
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    padding: 3%;
+    background-color: rgb(243 243 243);;
+    box-shadow: 7px 11px 20px grey;
+    border-radius: 12px;
+}

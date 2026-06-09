@@ -9,7 +9,13 @@ vidasRestantes.innerHTML = vidas;
 function ArriesgarLetra(){
     const letraUsuario = inputLetra.value.toUpperCase();
     inputLetra.value = "";
+    inputLetra.style.border = "1px solid grey";
+    mensajeFinal.innerHTML = "";
+
     if (!ValidarLetraUsuario(letraUsuario)){
+        inputLetra.style.border = "1px solid red";
+        mensajeFinal.style.color = "red";
+        mensajeFinal.innerHTML = "Tiene que ingresar mínimo una letra.";
         return;
     }
     let palabraGuiones = "";
@@ -31,6 +37,7 @@ function ArriesgarLetra(){
     }
 
     if (palabraGuiones === palabraOculta){
+        mensajeFinal.style.color = "green";
         mensajeFinal.innerHTML = "¡Ganaste!";
         DesactivarBoton();
     } else {
@@ -38,6 +45,7 @@ function ArriesgarLetra(){
             vidas--;
             vidasRestantes.innerHTML = vidas;
             if (vidas === 0){
+                mensajeFinal.style.color = "red";
                 mensajeFinal.innerHTML = "¡Perdiste! La palabra era: " + palabraOculta;
                 DesactivarBoton();
             }
