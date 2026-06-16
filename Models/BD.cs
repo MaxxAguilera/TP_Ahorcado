@@ -4,16 +4,15 @@ using Dapper;
 
 public class BD
 {
-    private string miConexionABD = @"Server=localhost; ...";
-
-    public List<string> TraerPalabras()
+    private string miConexionABD = @"Server=localhost; DataBase=Palabras;Integrated Security=True;TrustServerCertificate=True;";
+    public string TraerPalabras()
     {
-        List<string> Palabras = new List<string>();
-        using(Sqlconnection conn= new Sqlconnection(miConexionABD))
+        List<string> palabras = new List<string>();
+        using(Sqlconnection conn = new Sqlconnection(miConexionABD))
         {
             string query = "SELECT palabra from Palabras";
-            Palabras = conn.Query<string>(query).ToList();
+            palabras = conn.Query<string>(query).ToList();
         }
-        return Palabras;
+        return palabras;
     }
 }
