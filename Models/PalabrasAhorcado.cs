@@ -2,18 +2,19 @@ namespace tpAhorcado.Models;
 
 public class PalabrasAhorcado
 {
-    public List<string> palabras = new List<string>();
+    public List<string> palabras {get;set;}
     public BD baseDeDatos;
 
     public PalabrasAhorcado(){
         this.baseDeDatos = new BD();
+        this.palabras = new List<string>();
         this.palabras = baseDeDatos.TraerPalabras();
 
     }
     public string ObtenerPalabra(){
-
-        Random rnd = new Random();
-        string palabraFinal = palabras[rd.Next(0, palabras.Count)];
+        
+        Random rd = new Random();
+        string palabraFinal = this.palabras[rd.Next(0, palabras.Count)];
         return palabraFinal;
     }
 }

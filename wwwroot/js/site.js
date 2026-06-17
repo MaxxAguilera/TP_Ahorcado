@@ -6,6 +6,9 @@ const inputLetra = document.getElementById("inputLetra");
 let vidas = 10;
 vidasRestantes.innerHTML = vidas;
 
+const palabraUsuario = document.getElementById("palabraUsuario");
+const mensajeFinalPalabra = document.getElementById("mensajeFinalPalabra");
+
 function ArriesgarLetra(){
     const letraUsuario = inputLetra.value.toUpperCase();
     inputLetra.value = "";
@@ -77,4 +80,16 @@ function ValidarLetraUsuario(letraUsuario){
         return false;
     }
     return true;
+}
+
+function ValidarPalabraUsuario(){
+
+        mensajeFinalPalabra.innerHTML = ""
+        mensajeFinalPalabra.style.color = "1px solid grey";
+    if(palabraUsuario.innerHTML.length < 2){
+        palabraUsuario.innerHTML = "";
+        mensajeFinalPalabra.innerHTML = "Error, ingresa mínimo dos caracteres."
+        mensajeFinalPalabra.style.color = "red";
+        return;
+    }
 }
