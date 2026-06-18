@@ -4,7 +4,7 @@ using Dapper;
 
 public class BD
 {
-    private string miConexionABD = @"Server=localhost; DataBase=Ahorcado;Integrated Security=True;TrustServerCertificate=True;";
+    private string miConexionABD = @"Server=localhost; DataBase=Palabras;Integrated Security=True;TrustServerCertificate=True;";
 
     public List<string> TraerPalabras()
     {
@@ -19,7 +19,7 @@ public class BD
 
     public void NuevaPalabra(string palabraUsuario)
     {
-        string query = "INSERT INTO Palabras(palabra) VALUES (@palabraUsuario)";
+        string query = "INSERT INTO Palabras(palabra) VALUES (@palabra)";
 
         using(SqlConnection conn = new SqlConnection(miConexionABD))
         {
