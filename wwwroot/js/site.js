@@ -81,15 +81,3 @@ function ValidarLetraUsuario(letraUsuario){
     }
     return true;
 }
-
-function ValidarPalabraUsuario(){
-
-        mensajeFinalPalabra.innerHTML = ""
-        mensajeFinalPalabra.style.color = "1px solid grey";
-    if(palabraUsuario.innerHTML.length < 2){
-        palabraUsuario.innerHTML = "";
-        mensajeFinalPalabra.innerHTML = "Error, ingresa mínimo dos caracteres."
-        mensajeFinalPalabra.style.color = "red";
-        return;
-    }
-}

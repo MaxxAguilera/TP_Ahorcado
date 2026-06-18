@@ -26,6 +26,13 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult AgregarPalabra(string palabra)
+    {
+        BD bd = new BD();
+        bd.NuevaPalabra(palabra);
+        return RedirectToAction("Index");
+    }
+
     public IActionResult Privacy()
     {
         return View();

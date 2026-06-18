@@ -25,6 +25,5 @@ public class BD
         {
             conn.Execute(query, new {palabra = palabraUsuario});
         }
-        
     }
 }
